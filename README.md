@@ -11,6 +11,8 @@ a) Solve four exercises from the [book](https://www.casadocodigo.com.br/products
 
 * 2 from chapter 3 involving type creation
 
+* 2 from chapter 5
+
 b) Earn 3 stars in [AoC](https://adventofcode.com/2020/)
 
 c) Solve 2 medium difficulty exercises from HackerRank functional track
