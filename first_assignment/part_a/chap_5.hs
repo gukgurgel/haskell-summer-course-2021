@@ -28,7 +28,7 @@ data Tree a = NuloTree |
               Leaf a |
               Branch a (Tree a) (Tree a) deriving Show
 
-sumTree :: Tree Int -> Int
+sumTree :: Tree Double -> Double
 sumTree (Branch x l r) = sumTree l + x + sumTree r
 sumTree (Leaf x) = x
 sumTree NuloTree = 0
