@@ -21,3 +21,17 @@ tamanho (a :?: resto) = 1 + tamanho resto
 -- exemple:
 -- *Main> inserir 3 (4 :?: (5 :?: (7 :?: Nulo)))
 -- 3 :?: (4 :?: (5 :?: (7 :?: Nulo)))
+
+-- Problem 5.10
+
+data Tree a = NuloTree |
+              Leaf a |
+              Branch a (Tree a) (Tree a) deriving Show
+
+sumTree :: Tree Int -> Int
+sumTree (Branch x l r) = sumTree l + x + sumTree r
+sumTree (Leaf x) = x
+sumTree NuloTree = 0
+
+-- *Main> sumTree (Branch 50 (Branch 30 (Leaf 20) (Leaf 40)) (Branch 90 NuloTree (Leaf 100)))
+-- 330
