@@ -1,20 +1,21 @@
 # Haskell Summer Course 2021
+
 Course held (remotely) at the University of São Paulo by Prof. Alexandre de Oliveira.
 
-Code Created by Guilhermo Costa and Gustavo Gurgel
+Code by Guilhermo Costa and Gustavo Gurgel.
 
 ## First Assignment
 
-a) Solve four exercises from the [book](https://www.casadocodigo.com.br/products/livro-haskell):
+a) Solve four exercises from the [book](https://www.casadocodigo.com.br/products/livro-haskell), which can be freely chosen from the following categories:
 
-* 2 from chapter 2, whose solution contains map, filter, (optionally) foldl, and unfold
+* Exercises from chapter 2 whose solution involves `map`, `filter`, `unfold`, and, optionally, `foldl`.
 
-* 2 from chapter 3 involving type creation
+* Exercises from chapter 3 involving type creation.
 
-* 2 from chapter 5
+* Exercises from chapter 5.
 
-b) Earn 3 stars in [AoC](https://adventofcode.com/2020/)
+b) Earn 3 stars in [AoC 2020](https://adventofcode.com/2020/).
 
-c) Solve 2 medium difficulty exercises from HackerRank functional track
+c) Solve 2 medium difficulty exercises from HackerRank's functional track.
 
-d) Demostrate in Haskell that ```3 * a = a + a + a```
+d) Show that ```3 * a = a + a + a``` in type algebra using Haskell.
