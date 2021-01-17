@@ -1,26 +1,20 @@
----- Pragmas ----
-{-# LANGUAGE ViewPatterns #-}
-
----- Imports ----
 import Data.List
+import Text.Regex.TDFA
 
----- Types ----
 data Instruction = Acc Int | Jmp Int | Nop Int deriving Show
 type Line = Int
 type Acc = Int
 
----- Parsing functions -----
-readSigint :: String -> Acc
-readSigint ('+' : s) = read s
-readSigint s = read s
-
 readInstruction :: String -> Instruction
-readInstruction (stripPrefix "acc " -> Just s) = Acc (readSigint s)
-readInstruction (stripPrefix "jmp " -> Just s) = Jmp (readSigint s)
-readInstruction (stripPrefix "nop " -> Just s) = Nop (readSigint s)
-readInstruction _ = error "invalid instruction"
+readInstruction s =
+    let op = concat $ concat (s =~ "[acc|jmp|nop]" :: [[String]])
+        n  = read $ head $ head (s =~ "-?[0-9]+" :: [[String]])
+    in case op of
+         "acc" -> Acc n
+         "jmp" -> Jmp n
+         "nop" -> Nop n
+         _     -> error "invalid instruction"
 
----- Solution of Part One ----
 nextLine :: Line -> Instruction -> Line
 nextLine line (Jmp delta) = line + delta
 nextLine line _ = line + 1
