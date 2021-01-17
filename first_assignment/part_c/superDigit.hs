@@ -1,8 +1,6 @@
 import Data.List
 import Control.Arrow ((>>>))
 
-type Digit = Int
-
 base :: Integer
 base = 10
 
